@@ -412,7 +412,7 @@ const addShadow = (shadow) => {
   li.addEventListener('click', function(e){
     const innerText = li.innerHTML; 
     let boxShadow = li.style.boxShadow; 
-    console.log(boxShadow);
+   
     const copiedShadow = boxShadow; 
     navigator.clipboard.writeText(copiedShadow); 
     li.innerHTML= `Copied #${shadows.indexOf(shadow)}`; 
@@ -420,7 +420,6 @@ const addShadow = (shadow) => {
       li.innerHTML = innerText; 
     }, 1000);
     return () => clearTimeout(timeoutID);
-    
   })
 
 };
