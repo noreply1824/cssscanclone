@@ -93,6 +93,7 @@ li {
   flex: 0 0 153px;
   margin: 56px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .credits {
@@ -110,3 +111,4 @@ li {
   word-spacing: 2px;
   color: #000;
 }
+

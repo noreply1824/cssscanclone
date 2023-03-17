@@ -391,7 +391,7 @@ const addShadow = (shadow) => {
   
   const li = document.createElement('li'); 
   li.innerHTML = `<span>#${shadows.indexOf(shadow)}</span>`;
-  li.title = `Click to copy #${shadows.indexOf(shadow)}`;
+  li.title = `Click to copy ${shadows.indexOf(shadow)}`;
   if(typeof shadow === 'object'){
     li.style.boxShadow = shadow.boxShadow; 
 
@@ -412,7 +412,7 @@ const addShadow = (shadow) => {
   li.addEventListener('click', function(e){
     const innerText = li.innerHTML; 
     let boxShadow = li.style.boxShadow; 
-   
+    console.log(boxShadow);
     const copiedShadow = boxShadow; 
     navigator.clipboard.writeText(copiedShadow); 
     li.innerHTML= `Copied #${shadows.indexOf(shadow)}`; 
@@ -420,6 +420,7 @@ const addShadow = (shadow) => {
       li.innerHTML = innerText; 
     }, 1000);
     return () => clearTimeout(timeoutID);
+    
   })
 
 };
@@ -428,9 +429,5 @@ const processShadows = () => {
   for (const shadow of shadows) addShadow(shadow);
 };
 
-const copyToClipBoard = () => {
-
-  
-}
 
 processShadows();
