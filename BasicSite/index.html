@@ -8,40 +8,73 @@
     <title>Document</title>
   </head>
   <body>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <div class="parentClass">
-      <div class="navbarcontainer">
+      <div
+        class="navbarcontainer"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        "
+      >
         <div class="contentLeftItems">
-          <img
-            src="harekrishna.jpg"
-            alt="Radhe Krishna"
-            height="30px"
-            width="30px"
-          />
+          <img src="cssscan.svg" alt="Scan button" height="30px" width="30px" />
+          <h3>CSS Scan</h3>
         </div>
+        <div></div>
         <div class="contentRightItems">
-          <div>Home</div>
-          <div>Gallery</div>
-          <div>Operations</div>
-          <div>FDPL</div>
+          <a class="scanButton" href="https://www.google.com"
+            ><svg
+              style="width: 20px; margin-right: 6px"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="shopping-cart"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"
+              ></path>
+            </svg>
+            <span>Get CSS Scan</span></a
+          >
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="box">
-        <div class="heroHeader">
-          <p class="heroContent">Beautiful CSS box-shadow examples</p>
-        </div>
-        <div class="heroDesc">
-          <p class="contentDesc">
-            All of these box-shadow were lahsdfljaskdj copied using (click here to try a free
-            demo).
-          </p>
-          <p>With CSS Scan you can easily inspect or copy any website's CSS.</p>
-        </div>
-        <div class="heroAction">
-          <p class="contentAction">📌 Press Ctrl+D to bookmark this page</p>
-        </div>
+        <h1
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-weight: normal;
+          "
+        >
+          Beautiful CSS box-shadow examples
+        </h1>
+        <p style="word-spacing: 0.2rem">
+          All of these box-shadow were copied using
+          <span class="cssScan">CSS Scan</span> (<a class="clickHere" href="#"
+            >click here</a
+          >
+          to try a free demo).
+        </p>
+        <p>With CSS Scan you can easily inspect or copy any website's CSS.</p>
+        <p>
+          📌 Press <span class="controlD">Ctrl+D</span> to bookmark this page
+        </p>
       </div>
     </div>
+
+    <ul class="boxShadowStyleContainer"></ul>
+
+    <script src="index.js"></script>
   </body>
 </html>
